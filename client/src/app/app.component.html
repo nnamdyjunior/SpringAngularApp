@@ -1,0 +1,31 @@
+<div>
+    <input type="text" id="playerName" [(ngModel)]="player.name">
+    <input type="number" id="playerAge" [(ngModel)]="player.age">
+    <input type="number" id="playerCaps" [(ngModel)]="player.games">
+    <input type="number" id="playerGoals" [(ngModel)]="player.goals">
+    <button id="submit" (click)="savePlayer(this.player)">submit</button>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th *ngFor="let column of columns">
+        {{column}}
+      </th>
+    </tr>
+    <tr *ngFor="let plyr of myPlayers">
+      <td id="playerNameRow">
+        {{plyr.name}}
+      </td>
+      <td>
+        {{plyr.age}}
+      </td>
+      <td>
+        {{plyr.games}}
+      </td>
+      <td>
+        {{plyr.goals}}
+      </td>
+    </tr>
+  </table>
+</div>

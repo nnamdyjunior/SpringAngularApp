@@ -1,0 +1,7 @@
+task clientBuild(type: Exec){
+  commandLine 'ng', 'build'
+}
+
+task clientWatch(type: Exec){
+  commandLine 'ng', 'build', '--watch'
+}
